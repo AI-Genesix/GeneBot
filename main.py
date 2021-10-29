@@ -1,6 +1,7 @@
 import os
 import discord
 import random
+from whisper import whisper
 from timestamp import timebetween
 from keepalive import keepalive
 from hangman import hangman
@@ -28,6 +29,9 @@ async def on_message(message):
 
   if message.content.startswith('$timebetween'):
     await message.channel.send(await timebetween(message))
+  
+  if message.content.startswith('$whisper'):
+    await whisper(message);
 
 keepalive()
 client.run(os.environ['TOKEN'])
