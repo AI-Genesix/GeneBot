@@ -1,7 +1,7 @@
-# Python
+A bot created for my own purpose, in French
 
-This is the Template Repl for Python.
+Currently has :
 
-Python is a dynamic language emphasizing readability.
-
-[Check out the official docs here](https://www.python.org/).
+$rollname : creates a nickname based on two word lists
+$hangman : a Hangman game
+$timebetween : calculates time between two messages in a channel
