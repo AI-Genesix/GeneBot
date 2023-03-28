@@ -6,6 +6,7 @@ from hangman_list import wordlist
 
 words_array = wordlist.split(',');
 
+
 error_message = "ta commande est incorrecte\nUtilise **$hangman help** pour obtenir une liste de commandes."
 
 help_message = "voici les commandes que tu peux utiliser avec **Hangman** :\n**$hangman help** : affiche la liste des commandes $hangman\n**$hangman start** : démarre une partie de Hangman rien que pour toi\n**$hangman [lettre]** : si tu as une partie en cours, joue un tour avec la lettre donnée"

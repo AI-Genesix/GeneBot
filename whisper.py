@@ -2,9 +2,10 @@ import os
 import discord
 from discord import NotFound
 
-async def whisper(message):
+async def whisper(message, client):
   sender = message.author
   channel = message.channel
+  #w_chan = client.get_channel(904449461856657488)
   msg = message.content.split()
   if message.mentions:
     mentions = message.mentions
@@ -23,4 +24,5 @@ async def whisper(message):
   del msg[:2]
   await receiver.send("**" + sender.name + "**" + " t'a whisper, voici son message : \n\"" + " ".join(msg) + "\"")
   await channel.send("**" + sender.name + "** a envoyé un whisper à **" + receiver.name + "**")
+  #await w_chan.send("**" + sender.name + "** a envoyé un whisper à **" + receiver.name + "**, voici le message :\n\"" + " ".join(msg) + "\"")
   return
